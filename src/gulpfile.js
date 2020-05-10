@@ -1,7 +1,13 @@
 const gulp = require('gulp');
 
-gulp.task('webpack', () => {});
+gulp.task('webpack', (done) => {
+    done();
+});
 
-gulp.task('less', () => {});
+gulp.task('less', (done) => {
+    done();
+});
 
-gulp.task('default', ['webpack', 'less']);
+gulp.task('default', gulp.series(gulp.parallel('webpack', 'less')), (done) => {
+    done();
+});
