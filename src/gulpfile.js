@@ -1,4 +1,4 @@
-const gulp = require('gulp');
+const gulp = require("gulp");
 
 gulp.task('webpack', (done) => {
     const webpack = require('webpack-stream');
