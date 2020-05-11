@@ -1,0 +1,5 @@
+*.log
+.git
+.vscode
+**/node_modules
+
