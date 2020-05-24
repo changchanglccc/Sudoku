@@ -20,3 +20,8 @@ gulp.task('less', (done) => {
 gulp.task('default', gulp.series(gulp.parallel('webpack', 'less')), (done) => {
     done();
 });
+
+gulp.task("watch", () => {
+    gulp.watch("less/**/*.less", gulp.series('less', (done) => { done() }));
+    gulp.watch("js/**/*.js", gulp.series('webpack', (done) => { done() }));
+})
